@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, RecaptchaVerifier, signInWithPhoneNumber,TwitterAuthProvider, GithubAuthProvider } from 'firebase/auth';
 import { app } from '../firebase'; // Ensure the correct path
 import { useNavigate } from 'react-router-dom';
-import { TwitterAuthProvider } from 'firebase/auth';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -49,6 +48,11 @@ const Login = () => {
 
     const loginWithTwitter = () => {
         const provider = new TwitterAuthProvider();
+        signInWithProvider(provider);
+    };
+
+    const loginWithGitHub = () => {
+        const provider = new GithubAuthProvider();
         signInWithProvider(provider);
     };
 
@@ -105,6 +109,7 @@ const Login = () => {
 
                 <button type='button' onClick={loginWithGoogle}>Login With Google</button>
                 <button type='button' onClick={loginWithTwitter}>Login With twitter</button>
+                <button type='button' onClick={loginWithGitHub}>Login With Git Hub</button>
             <button type='button'onClick={loginWithFacebook}>Login With Facebook</button>
             {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
         
