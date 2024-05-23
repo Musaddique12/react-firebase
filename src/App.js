@@ -18,6 +18,7 @@ import Login from './files/Login';
 function App() {
 
   const myrouter =createBrowserRouter([
+    {path:'',Component:Signup},
     {path:'dashbord',Component:Dashbord,children:[
       {path:'',Component:AddStudent},
       {path:'student',Component:AddStudent},
@@ -30,7 +31,7 @@ function App() {
       {path:'showworkers',Component:ShowWorkers},
       {path:'updateworkers',Component:UpdateWorkers}
     ]},
-    {path:'/signup',Component:Signup},
+    {path:'signup',Component:Signup},
     {path:'login',Component:Login}
    
   ])
