@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 import { app } from '../firebase'; // Ensure the correct path
 import { useNavigate } from 'react-router-dom';
+import { TwitterAuthProvider } from 'firebase/auth';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -33,7 +34,7 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 console.log(result);
-                navigate('/dashboard'); // Redirect after successful login
+                navigate('/dashbord'); // Redirect after successful login
             })
             .catch((err) => {
                 console.error(`Error during ${provider.providerId} sign-in:`, err);
@@ -43,6 +44,11 @@ const Login = () => {
 
     const loginWithGoogle = () => {
         const provider = new GoogleAuthProvider();
+        signInWithProvider(provider);
+    };
+
+    const loginWithTwitter = () => {
+        const provider = new TwitterAuthProvider();
         signInWithProvider(provider);
     };
 
@@ -98,6 +104,7 @@ const Login = () => {
 
 
                 <button type='button' onClick={loginWithGoogle}>Login With Google</button>
+                <button type='button' onClick={loginWithTwitter}>Login With twitter</button>
             <button type='button'onClick={loginWithFacebook}>Login With Facebook</button>
             {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
         
