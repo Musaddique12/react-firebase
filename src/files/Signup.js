@@ -44,7 +44,7 @@ const Signup = () => {
                     required 
                 />
                 <input type='submit' value='Submit' />
-                <button type='button' onClick={()=>{navigate('login')}}></button>
+                <button type='button' onClick={()=>{navigate('login')}}>Login</button>
             </form>
             {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
         </div>
