@@ -1,0 +1,100 @@
+/* Canteen.css */
+
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  
+  .card {
+    height: 280px;
+    background: #fff;
+    width: 220px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: none; /* Disable transition initially */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Apply transition on hover */
+  }
+  
+  .image-container {
+    height: 150px;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .food-name {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .price-button {
+    width: 70px;
+    height: 35px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: none; /* Disable transition initially */
+  }
+  
+  .price-button:hover {
+    background-color: #45a049;
+    transition: background-color 0.3s ease; /* Apply transition on hover */
+  }
+  
+  .update-button-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  .update-button {
+    padding: 5px 15px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: none; /* Disable transition initially */
+  }
+  
+  .update-button:hover {
+    background-color: #1e88e5;
+    transition: background-color 0.3s ease; /* Apply transition on hover */
+  }
+  

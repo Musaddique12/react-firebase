@@ -37,6 +37,8 @@ const Dashbord = () => {
           <Link to='/dashbord/showfaculty'style={{display:'block',color:'white',marginTop:'4px'}} >Show Faculty</Link>
           <Link to='/dashbord/addworkers'style={{display:'block',color:'white',marginTop:'4px'}} >Add Worker</Link>
           <Link to='/dashbord/showworkers'style={{display:'block',color:'white',marginTop:'4px'}} >Show Worker</Link>
+          <Link to='/dashbord/canteen' style={{display:'block',color:'white',marginTop:'4px'}} >Show Food</Link>
+          <Link to='/dashbord/addfood'style={{display:'block',color:'white',marginTop:'4px'}}>Add Food</Link>
           <br/>
           <button type='button' onClick={logout}>Logout</button>
         </div>

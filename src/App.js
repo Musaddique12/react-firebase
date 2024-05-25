@@ -13,6 +13,9 @@ import ShowWorkers from './files/ShowWorkers';
 import UpdateWorkers from './files/UpdateWorkers';
 import Signup from './files/Signup';
 import Login from './files/Login';
+import Canteen from './files/Canteen';
+import AddFood from './files/AddFood';
+import UpdateFood from './files/UpdateFood';
 
 
 function App() {
@@ -29,10 +32,13 @@ function App() {
       {path:'updatefaculty',Component:UpdateFaculty},
       {path:'addworkers',Component:AddWorkers},
       {path:'showworkers',Component:ShowWorkers},
-      {path:'updateworkers',Component:UpdateWorkers}
+      {path:'updateworkers',Component:UpdateWorkers},
+      {path:'canteen',Component:Canteen},
+      {path:'addfood',Component:AddFood},
+      {path:'updatefood',Component:UpdateFood}
     ]},
     {path:'signup',Component:Signup},
-    {path:'login',Component:Login}
+    {path:'login',Component:Login},
    
   ])
 
