@@ -1,4 +1,3 @@
-ChatGPT
 
 Memory Full
 You said:
